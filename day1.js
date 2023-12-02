@@ -1,16 +1,12 @@
 function findFirstRepeated(gifts) {
-  const mapGifts = new Map()
-  let firstRepeatedGift = -1
-  let finded = false
-  gifts.forEach(gift => {
-    if(mapGifts.has(gift) && !finded) {
-      finded = true
-      firstRepeatedGift = gift
-    } else {
-      mapGifts.set(gift)
+  const giftList = new Set();
+    for (const gift of gifts) {
+      if (giftList.has(gift)) {
+        return gift; // Devuelve el primer regalo repetido
+      } else {
+        giftList.add(gift);
+      }
     }
-  })
-  return firstRepeatedGift
+  return -1; // Si no se encuentra ninguna ocurrencia repetida
 }
-
-console.log(findFirstRepeated([1,2,3,4,5,5,1,2,3,4]))
+console.log(findFirstRepeated([1,2,3,4,5,3,4,1]))
