@@ -1,3 +1,4 @@
+// !Complejidad cognitiva: 2
 function findFirstRepeated(gifts) {
   const giftList = new Set();
     for (const gift of gifts) {
