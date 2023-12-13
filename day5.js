@@ -1,3 +1,4 @@
+// ! Complejidad cognitiva: 5
 function cyberReindeer(road, time) {
   // Code here
   let result = []
